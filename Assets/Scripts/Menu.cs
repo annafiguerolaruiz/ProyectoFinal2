@@ -19,6 +19,24 @@ public class Menu : MonoBehaviour
     public void MenuPrincial()
     {
         SceneManager.LoadScene("Juego");
+
     }
-    
+
+    public void MenuControls()
+    {
+        SceneManager.LoadScene("Controls");
+
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("Menu");
+
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
 }
