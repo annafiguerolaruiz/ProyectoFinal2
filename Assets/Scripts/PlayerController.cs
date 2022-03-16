@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float forwardInput;
 
-    public GameObject ProjectilePrefab;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -31,12 +31,6 @@ public class PlayerController : MonoBehaviour
         //Movimiento rotatorio del tanque
         transform.Rotate(Vector3.up * Time.deltaTime * turnSpeed * horizontalInput);
 
-
-        //Proyectil
-        if (Input.GetKeyDown(KeyCode.RightControl))
-        {
-            Instantiate(ProjectilePrefab, transform.position, gameObject.transform.rotation);
-        }
 
      }
 }
