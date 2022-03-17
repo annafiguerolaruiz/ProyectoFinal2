@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int CurrentLive;
-    private int Daño = 1;
-    private int Vida = 8;
+    //public int CurrentLive;
+    //private int Vida = 8;
     
     // Start is called before the first frame update
     void Start()
@@ -16,33 +15,34 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        //CurrentLive = Vida;
+      //  CurrentLive = Vida;
     }
 
-    public void OnCollissionEnter(Collider otherCollider)
+    public void OnCollisionEnter(Collision otherCollider)
     {
+        Debug.Log("BALA");
         //Cuando la bala colisiona contra el enemigo, el mismo, va perdiendo vida
-        if(gameObject && otherCollider.gameObject.CompareTag("Bala"))
+        if (otherCollider.gameObject.CompareTag("Bala"))
         {
             //HacerDaño(1);
-            CurrentLive--;
-            Debug.Log(CurrentLive);
+            Destroy(gameObject);
+            
             Destroy(otherCollider.gameObject);
 
 
-            //Cuando la vida del enemigo llega a 0 , este desaparece
+           /* //Cuando la vida del enemigo llega a 0 , este desaparece
             if (CurrentLive == 0)
             {
                 print("hola");
                
                 Destroy(gameObject);
 
-            }
+            }*/
         }
     }
 
-    void HacerDaño( int damage)
+   /* void HacerDaño(int damage)
     {
         CurrentLive -= damage;
-    }
+    }*/
 }
