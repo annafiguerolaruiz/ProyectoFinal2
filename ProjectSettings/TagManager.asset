@@ -7,6 +7,9 @@ TagManager:
   - Obstacle
   - Enemy
   - Bala
+  - WINE
+  - BalaEnemiga
+  - DistanciaDisparoEnemigo
   layers:
   - Default
   - TransparentFX
