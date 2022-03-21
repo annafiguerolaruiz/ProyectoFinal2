@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float forwardInput;
 
-    public int Vida = 25;
+    public int Vida = 6;
 
     public GameObject GameOver;
     public GameObject Wine;
